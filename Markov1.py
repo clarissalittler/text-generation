@@ -24,7 +24,7 @@ def markovMulti(numTimes,ourDict):
     testGroup = []
     for i in range(0,numTimes):
         if(len(testGroup) < numWords):
-            testGroup = list(random.choice(ourDict.keys()))
+            testGroup = list(random.choice(list(ourDict.keys())))
             outwords = list(testGroup)
         else:
             w = random.choice(ourDict[tuple(testGroup)])
@@ -36,4 +36,4 @@ def markovMulti(numTimes,ourDict):
 
 d = groupWords(dictFile)
 
-print(markovMulti(1000,d)
+print(markovMulti(1000,d))
